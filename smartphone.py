@@ -18,5 +18,5 @@ class Smartphone(Device):
 Price: {self.price}$, 
 Stock: {self.stock}, 
 Warranty period: {self.warranty_period} months,
-Screen size: {self.screen_size},
+Screen size: {self.screen_size} inches,
 Battery life: {self.battery_life} hours'''
