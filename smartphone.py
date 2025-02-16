@@ -15,8 +15,8 @@ class Smartphone(Device):
 
     def display_info(self):
         return f'''Name: {self.name}, 
-Price: {self.price}, 
+Price: {self.price}$, 
 Stock: {self.stock}, 
-Warranty period: {self.warranty_period}
+Warranty period: {self.warranty_period} months,
 Screen size: {self.screen_size},
-Battery life: {self.battery_life}'''
+Battery life: {self.battery_life} hours'''
