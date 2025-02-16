@@ -1,7 +1,6 @@
-from device import Device
-from smartphone import Smartphone
-from laptop import Laptop
-from tablet import Tablet
+from device_subclasses.smartphone import Smartphone
+from device_subclasses.laptop import Laptop
+from device_subclasses.tablet import Tablet
 
 
 if __name__ == '__main__':
@@ -13,3 +12,4 @@ if __name__ == '__main__':
     print()
     tablet1 = Tablet("iPad Pro", 1099, 25, "2048x1536", 468)
     print(tablet1.display_info())
+
