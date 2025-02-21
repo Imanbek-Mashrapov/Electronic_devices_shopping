@@ -14,9 +14,4 @@ class Tablet(Device):
         print(f"Using {self.name}'s touchscreen...")
 
     def display_info(self):
-        return f'''Name: {self.name}, 
-Price: {self.price}$, 
-Stock: {self.stock}, 
-Warranty period: {self.warranty_period} months,
-Screen resolution: {self.screen_resolution},
-Weight: {self.weight} grams'''
+        return f'Name: {self.name}, Price: {self.price}$, Stock: {self.stock}, Warranty period: {self.warranty_period} months, Screen resolution: {self.screen_resolution}, Weight: {self.weight} grams'

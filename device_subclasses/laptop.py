@@ -14,9 +14,4 @@ class Laptop(Device):
         print(f"Typing '{typing_word}' on {self.name} keyboard...")
 
     def display_info(self):
-        return f'''Name: {self.name}, 
-Price: {self.price}$, 
-Stock: {self.stock}, 
-Warranty period: {self.warranty_period} months,
-RAM size: {self.ram_size} GB,
-Processor size: {self.processor_speed} GHz'''
+        return f'Name: {self.name}, Price: {self.price}$, Stock: {self.stock}, Warranty period: {self.warranty_period} months, RAM size: {self.ram_size} GB, Processor size: {self.processor_speed} GHz'

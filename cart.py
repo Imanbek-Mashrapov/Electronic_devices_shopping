@@ -4,9 +4,9 @@ class Cart:
         self.total_amount = 0
 
     def add_device(self, device, amount):
-        if device.is_available(amount):
-            self.items.append((device, amount))
-            print(f'Added to cart: {amount} of {device}')
+        pair = (device, amount)
+        self.items.append(pair)
+        print(f'Added to cart: {amount} of {device.display_info()}')
 
     def remove_device(self, device, amount):
         for index, (item_device, quantity) in enumerate(self.items):
@@ -20,7 +20,8 @@ class Cart:
         print(f"{device.name} is not in the cart.")  # Runs if device was not found
 
     def calculate_total(self):
-        self.total_amount = sum([item[1] for item in self.items])
+        self.total_amount = sum(device.price * quantity for device, quantity in self.items)
+        return self.total_amount
 
     def checkout(self):
         if not self.items:
@@ -34,7 +35,10 @@ class Cart:
         for device, quantity in self.items:
             device.reduce_stock(quantity)
 
+        print("\nReceipt")
         for device, quantity in self.items:
-            print(f'''Receipt{quantity} x {device.name} - ${device.price} each
-        f"Total Amount: ${self.calculate_total()}''')
+            print(f"{quantity} x {device.name} - ${device.price}")
+            print(f"Total Amount: ${self.calculate_total()}")
 
+        self.items.clear()
+        self.total_amount = 0
