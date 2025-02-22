@@ -269,6 +269,8 @@ Total Amount: $3698
 []
 ```
 
+## UML
+![device_shopping_uml.png](device_shopping_uml.png)
 
 
 
