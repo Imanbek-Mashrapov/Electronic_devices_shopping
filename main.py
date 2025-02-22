@@ -64,11 +64,7 @@ if __name__ == '__main__':
 
             my_cart.add_device(devices[choice - 1], device_num)
             print("\nCurrent Cart:")
-            for device, quantity in my_cart.items:
-                print(f"{quantity} x {device.name} - ${device.price} each")
-            print(f"Total price: ${my_cart.calculate_total()}")
-            print(f"Total price: {my_cart.calculate_total()}")
-
+            my_cart.print_items()
             stop = input("Do you want to exit? (1 = Yes, 0 = No): ").strip()
             if stop == "1":
                 print('Thanks for your purchases')

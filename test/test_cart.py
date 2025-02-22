@@ -29,7 +29,7 @@ class TestCart(unittest.TestCase):
         self.cart.add_device(self.device1, 1)
         self.cart.add_device(self.device2, 1)
         self.cart.add_device(self.device3, 1)
-        total = self.cart.calculate_total()
+        total = self.cart.get_total_price()
         self.assertEqual(total, 1197)
 
     def test_checkout(self):
